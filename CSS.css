@@ -1,0 +1,12 @@
+#header{
+	display: flex
+}
+#header{
+	place-content: center
+}
+#menu{
+background-color: white
+}
+#menu :hover{
+color : orange
+}
