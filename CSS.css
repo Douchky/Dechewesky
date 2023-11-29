@@ -1,38 +1,42 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'EB Garamond', serif;
+
+    font-family: 'EB Garamond', sans serif;
     margin-top: 180px;
     margin-bottom: -200px;
 }
 
 header {
-    position: fixed;
+
+    position: fixed;  /* Assis couché pas bougé :) */
     width: 100%;
     top: 0;
     z-index: 100;
 }
 
 .white-bar, .black-bar {
+    /* j'ai patouillé mais cette ligne de code influe sur les effets au survol de la souris*/
     width: 100%;
     margin-bottom: 1px;
 }
 
 .white-bar {
+
     background-color: white;
-    height: 70px;
+    height: 80px;
     text-align: center;
     margin-bottom: -20px;
     padding-top: 20px;
 }
 
 #logo {
+
     height: 65px;
     display: block;
     margin: 0 auto;
 }
 
 .black-bar {
+
     background-color: black;
     height: 43px;
     margin-top: -1px;
@@ -40,21 +44,25 @@ header {
 }
 
 nav {
+
     text-align: center;
 }
 
 nav ul {
+
     list-style-type: none;
     margin: 20px;
     padding: 0;
 }
 
 nav ul li {
+
     display: inline-block;
     margin: 12px;
 }
 
 nav ul li a {
+
     text-decoration: none;
     color: white;
     font-size: 20px;
@@ -62,10 +70,12 @@ nav ul li a {
 }
 
 nav ul li a:hover {
+
     border-bottom: 1px solid white;
 }
 
 section.box {
+/* Me demandez pas comment j'ai trouvé ça. Moi même je m'imprresionne.*/
     width: 1042px;
     height: 300px;
     margin: 20px auto 20px auto;
@@ -75,6 +85,8 @@ section.box {
 }
 
 section.box .column {
+    /* pour X raison il considère que la colone 0 va jusqque sous le texte, qqun peu voior d'ou vient le Pb?/*/
+
     display: inline-block;
     vertical-align: top;
     margin-bottom: 0px;
@@ -84,6 +96,7 @@ section.box .column {
 }
 
 section.box .text-box {
+/* Pas touche sinon le txt sur l'hoverbox bouge*/
     position: absolute;
     top: 20%;
     left: 50%;
@@ -95,6 +108,7 @@ section.box .text-box {
 }
 
 section.box .spacer {
+    /* c'est l'espace entrre les colonnes, je comprends pas pourquoi il à unne inflience sur l'espacement horizontal*/
     width: 5px;
     display: inline-block;
 }
@@ -113,19 +127,23 @@ section.box .column:hover img.opaque {
 }
 
 section.box .image-text {
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
-    background: none; /* Supprime le fond des textes */
+    background: none; 
 }
 
 
 footer {
+/* j'arrive pas à enlever le petit point bizarre sous le footer*/
     height: 80px;
     width: 100%;
-    background-color: black;
-    color: white;
+    background-color: white;
+    border-inline-end-color: black; /* marche pas*/
+    color: black;
     text-align: center;
     margin-top: 25px;
     padding-top: 5px;
-    padding-bottom: 5px;
+    padding-bottom: 0px;
+    border-top-style: groove;
+    border-bottom-style: groove;
 }
