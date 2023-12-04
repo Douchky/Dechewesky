@@ -1,42 +1,31 @@
-body {
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    background: white;
+}
 
-    font-family: 'EB Garamond', sans serif;
+body {
+    font-family: 'EB Garamond', sans-serif;
     margin-top: 180px;
     margin-bottom: -200px;
 }
 
-header {
-
-    position: fixed;  /* Assis couché pas bougé :) */
-    width: 100%;
-    top: 0;
-    z-index: 100;
-}
 
 .white-bar, .black-bar {
-    /* j'ai patouillé mais cette ligne de code influe sur les effets au survol de la souris*/
     width: 100%;
     margin-bottom: 1px;
 }
 
-.white-bar {
-
-    background-color: white;
-    height: 80px;
-    text-align: center;
-    margin-bottom: -20px;
-    padding-top: 20px;
-}
 
 #logo {
-
     height: 65px;
     display: block;
     margin: 0 auto;
 }
 
 .black-bar {
-
     background-color: black;
     height: 43px;
     margin-top: -1px;
@@ -44,49 +33,42 @@ header {
 }
 
 nav {
-
     text-align: center;
+    background-color: black;
 }
 
 nav ul {
-
     list-style-type: none;
     margin: 20px;
     padding: 0;
 }
 
 nav ul li {
-
     display: inline-block;
     margin: 12px;
 }
 
 nav ul li a {
-
     text-decoration: none;
     color: white;
-    font-size: 20px;
+    font-size: 18px;
     transition: border-bottom 0.3s;
 }
 
 nav ul li a:hover {
-
     border-bottom: 1px solid white;
 }
 
 section.box {
-/* Me demandez pas comment j'ai trouvé ça. Moi même je m'imprresionne.*/
     width: 1042px;
     height: 300px;
     margin: 20px auto 20px auto;
     text-align: center;
     overflow: hidden;
-    position: relative; 
+    position: relative;
 }
 
 section.box .column {
-    /* pour X raison il considère que la colone 0 va jusqque sous le texte, qqun peu voior d'ou vient le Pb?/*/
-
     display: inline-block;
     vertical-align: top;
     margin-bottom: 0px;
@@ -96,7 +78,6 @@ section.box .column {
 }
 
 section.box .text-box {
-/* Pas touche sinon le txt sur l'hoverbox bouge*/
     position: absolute;
     top: 20%;
     left: 50%;
@@ -108,7 +89,6 @@ section.box .text-box {
 }
 
 section.box .spacer {
-    /* c'est l'espace entrre les colonnes, je comprends pas pourquoi il à unne inflience sur l'espacement horizontal*/
     width: 5px;
     display: inline-block;
 }
@@ -132,13 +112,11 @@ section.box .image-text {
     background: none; 
 }
 
-
 footer {
-/* j'arrive pas à enlever le petit point bizarre sous le footer*/
     height: 80px;
     width: 100%;
     background-color: white;
-    border-inline-end-color: black; /* marche pas*/
+    border-inline-end-color: black;
     color: black;
     text-align: center;
     margin-top: 25px;
@@ -147,3 +125,4 @@ footer {
     border-top-style: groove;
     border-bottom-style: groove;
 }
+
