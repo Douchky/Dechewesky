@@ -1,9 +1,11 @@
+/* Impossible de suivre la maquette à la lettre, j'ai fait au mieux sorry*/
 header {
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 100;
     background: white;
+    margin: 0;
 }
 
 body {
@@ -12,12 +14,10 @@ body {
     margin-bottom: -200px;
 }
 
-
 .white-bar, .black-bar {
     width: 100%;
     margin-bottom: 1px;
 }
-
 
 #logo {
     height: 65px;
@@ -27,9 +27,9 @@ body {
 
 .black-bar {
     background-color: black;
-    height: 43px;
-    margin-top: -1px;
+    height: 45px;
     padding-bottom: 5px;
+    margin: 0;
 }
 
 nav {
@@ -108,8 +108,7 @@ section.box .column:hover img.opaque {
 
 section.box .image-text {
     font-size: 30px;
-    font-weight: bold;
-    background: none; 
+    font-weight: bold; 
 }
 
 footer {
@@ -126,3 +125,131 @@ footer {
     border-bottom-style: groove;
 }
 
+@media (max-width: 768px) { /* C'est la partie reloue */
+    header {
+        position: static; 
+    }
+
+    body {
+        margin-top: 0; 
+    }
+
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        text-align: left;
+    }
+
+    .nav-links.mobile-menu {
+        display: block; 
+    }
+
+    .nav-links li {
+        display: block;
+        margin: 8px 0;
+    }
+
+    .nav-links li a {
+        display: block;
+        padding: 10px;
+    }
+
+    section.box .column, section.box .image-box {
+        width: 100%; 
+    }
+
+    section.box .text-box {
+        position: static; 
+        opacity: 1;
+    }
+
+    /* Désactiver les effets de survol */
+    section.box .column:hover .text-box,
+    section.box .column:hover img.opaque {
+        opacity: 1;
+        cursor: default;
+    }
+
+@media (max-width: 768px) {
+    header {
+        position: static; 
+    }
+
+    body {
+        margin-top: 80px; 
+        margin-bottom: 0; 
+    }
+
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        background-color: black;
+    }
+
+    .nav-links.mobile-menu {
+        display: block;
+    }
+
+    .nav-links li {
+        display: block;
+        margin: 0;
+    }
+
+    .nav-links li a {
+        display: block;
+        padding: 10px;
+        color: white;
+        font-size: 18px;
+    }
+
+    section.box {
+        width: auto; 
+        height: auto; 
+    }
+
+    section.box .column {
+        display: block;
+        width: 100%; 
+        height: auto; 
+        margin-bottom: 20px; 
+    }
+
+    section.box .column img {
+        width: 100%; 
+        height: 200px; 
+        object-fit: cover; 
+    }
+    
+/* j'ai trouvé un tuto sur youtube que j'ai suiivi, mais ça tient par la force du saint esprit */
+
+    section.box .text-box {
+        position: absolute;
+        bottom: 10px; 
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(100% - 20px); 
+        background: rgba(0, 0, 0, 0.5); 
+        color: white; 
+        opacity: 1; 
+        font-size: 4vw; 
+    }
+    section.box .column:hover .text-box,
+    section.box .column:hover img.opaque {
+        opacity: 1;
+    }
+    
+    footer {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+}
