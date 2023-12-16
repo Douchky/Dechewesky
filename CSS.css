@@ -1,17 +1,19 @@
-/* Impossible de suivre la maquette à la lettre, j'ai fait au mieux sorry*/
+/* Ma méthode de travail consiste à tenter des trucs et à bidouiller jusqu'à ce que ça marche. 
+Constat : c'est probablement pas une bonne méthode. */
 header {
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 100;
     background: white;
-    margin: 0;
+    margin: -10;
 }
 
 body {
     font-family: 'EB Garamond', sans-serif;
     margin-top: 180px;
     margin-bottom: -200px;
+    text-align: none ;
 }
 
 .white-bar, .black-bar {
@@ -111,8 +113,24 @@ section.box .image-text {
     font-weight: bold; 
 }
 
+#trois-colonnes .columns-container {
+    display: flex;
+    flex-wrap: wrap; 
+}
+
+#trois-colonnes .colonne2-0 {
+    flex: 0 0 50%; 
+    box-sizing: border-box; 
+}
+
+#trois-colonnes .colonne2-1, 
+#trois-colonnes .colonne2-2 {
+    flex: 0 0 5%; 
+    box-sizing: border-box; 
+}
+
 footer {
-    height: 80px;
+    height: 90px;
     width: 100%;
     background-color: white;
     border-inline-end-color: black;
@@ -120,10 +138,22 @@ footer {
     text-align: center;
     margin-top: 25px;
     padding-top: 5px;
-    padding-bottom: 0px;
+    padding-bottom: 10px;
     border-top-style: groove;
     border-bottom-style: groove;
 }
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-col {
+    flex: 1;
+    text-align: center;
+}
+
 
 @media (max-width: 768px) { /* C'est la partie reloue */
     header {
@@ -132,11 +162,6 @@ footer {
 
     body {
         margin-top: 0; 
-    }
-
-    .burger {
-        display: block;
-        cursor: pointer;
     }
 
     .nav-links {
@@ -168,36 +193,11 @@ footer {
         opacity: 1;
     }
 
-    /* Désactiver les effets de survol */
+    /* Ça désactive les effets de survol */
     section.box .column:hover .text-box,
     section.box .column:hover img.opaque {
         opacity: 1;
         cursor: default;
-    }
-
-@media (max-width: 768px) {
-    header {
-        position: static; 
-    }
-
-    body {
-        margin-top: 80px; 
-        margin-bottom: 0; 
-    }
-
-    .burger {
-        display: block;
-        cursor: pointer;
-    }
-
-    .nav-links {
-        display: none;
-        width: 100%;
-        background-color: black;
-    }
-
-    .nav-links.mobile-menu {
-        display: block;
     }
 
     .nav-links li {
@@ -230,7 +230,8 @@ footer {
         object-fit: cover; 
     }
     
-/* j'ai trouvé un tuto sur youtube que j'ai suiivi, mais ça tient par la force du saint esprit */
+/* j'ai trouvé un tuto sur youtube que j'ai suivi, mais ça fonctionne par la force du saint esprit, car je n'ai RIEN compris. 
+Si vous ne metttez pas les points pour ça, fair enough */
 
     section.box .text-box {
         position: absolute;
@@ -249,7 +250,7 @@ footer {
     }
     
     footer {
-        padding-top: 5px;
-        padding-bottom: 5px;
+        padding-top: 10px;
+        padding-bottom: 60px;/* Oui 60 c'est beaucoup. Non je n'ai pas su faire autrement. */
     }
 }
